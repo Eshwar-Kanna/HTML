@@ -1,0 +1,109 @@
+<html>
+<header>
+<h1 id = "t1" > <marquee> 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓣𝓸 𝓗𝓣𝓜𝓛 𝓛𝓲𝓿𝓮 𝓘𝓷𝓽𝓮𝓻𝓹𝓻𝓮𝓽𝓮𝓻</marquee> </h1>
+</br>
+</header>
+
+<style>
+#d2 {
+  color: rgb(255, 99, 69);
+ text-align : center ;
+font-weight: bold;
+font-family: "Monotype Corsiva", serif;
+background-color: #333333 ;
+font-size: 50px;
+letter-spacing: 10px;
+border-radius : 10px ;
+}
+
+#t1 {
+color: #014d4e ;
+ text-align : center ;
+font-weight: bold;
+font-family: "Monotype Corsiva", serif;
+background-color: none ;
+font-size: 50px;
+letter-spacing: 5px;
+}
+
+#d1 {
+color: #ff0080 ;
+ text-align : center ;
+font-weight: bold;
+font-family: Arial, sans-serif;
+background-color: none ;
+font-size: 30px;
+letter-spacing: 5px;
+border-radius: 25px;
+border-style: dashed  groove ;
+border-width: thick ;
+border-color: black ;
+overflow : auto ;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none  ;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+}
+
+h2{
+color : rgb(160 ,140 ,80 ) ;
+font-size : 50px;
+
+}
+
+</style>
+
+<script>
+function one() {
+var a = document.getElementById('d1') ;
+var b = document.getElementById('d2') ;
+b.innerHTML  = a.value ;
+}
+
+function reset() {
+var a = document.getElementById('d1') ;
+var b = document.getElementById('d2') ;
+b.innerHTML = "";
+a.value = "";
+}
+
+
+</script>
+
+ 
+ <div  id = "d2"  > </div> 
+
+</br>
+
+</br>
+<body>
+  <h2>  Èñ†êr Úr ÇðÐê ßêlðw    </h2> <textarea  id = 'd1'  oninput ='one()'  > </textarea>
+  <!--  <button  class = 'button'  onclick = "one()" > 𝓡un </button> -->
+</br>
+</br>
+<button  class = 'button'  onclick = "reset()" > 𝓡𝓮𝓼𝓮𝓽 </button>
+</br>
+</body>
+
+
+</html>
