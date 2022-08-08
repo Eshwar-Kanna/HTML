@@ -1,0 +1,27 @@
+// file 1 //
+
+myform.html 
+      <form action = "/form" method = "post" >
+          name < input type = "submit"  name = 'n'  />
+          
+      </form>
+
+
+
+// file 2  //
+const expresss = require("express") ;
+const app = express() ;
+app.use (express , urlencode ({extended : true })) ;
+app.post ("/form" , function (req ,res ) {
+        const myx = req.body.x ;
+        const myy = req.body.y ;
+        let z = number(myx) + number(myy) ;
+        console.log(req.body) ;
+        res.send("sum :" + z ) ;
+        })
+        
+        app.get ("/form" , function (req , res )  {
+        res.sendFile(__dirname + "/myform.html") 
+        })
+        
+   app.listen (3000);
