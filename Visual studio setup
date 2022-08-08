@@ -1,0 +1,13 @@
+Download visual studio to OS from website of Visual studio
+
+add a folder in it 
+
+initializing folder 
+        npm init 
+        
+add a folder (Entrypoint)  index.js  
+
+write code in index.js
+
+to run code in file use    node index.js
+
