@@ -1,0 +1,63 @@
+  // file 1  //
+  
+  form.html
+  
+      <form action = '/final'>
+        <select>
+            <option> date </option>
+            <option  value = "cal" > open calendar </option>
+            <option value = "ls"> list files </option>
+            
+         </select>
+         </br>
+         
+                <input type = 'submit' />
+                
+        </form>
+        
+        
+        
+        
+        
+        
+        // file 2  //
+        
+        index.js 
+        
+            const express = require ("express") ;
+            const app = express() ;
+            const fs = require("fs") ;
+            const {exec} = require ("child_process") ;
+            
+            function startserver () {
+                console.log ("somebody connected " + req.ip) ;
+                console.log ("client ip " + req.ip + "method" + req.method ) ;
+                }
+             function lw(err , stdout , stderr) {
+             console.log(stdout)
+             }
+             
+            function lwroot (req ,res ) {
+            res.send (" <h1> Kanna </h1> ")
+            let data = "clientip" + req.ip + "method" + req.method + "\n"
+            fs.writeFile("lw.txt" , data , [flag : 'a+' ] , lw)
+            }
+            
+            function lwform(req , res) {
+            res.sendFile( __dirname + "/form.html" )
+            }
+            
+            function lwfinal( req , res ) {
+            let cdata = req.query.data
+            exec (cdata ,lw)
+            res.send("u reached " + cdata )
+            }
+            
+            app.listen (3000 , startserver)
+            app.get("/" , lwroot)
+            app.get("/form" , lwform)
+            app.get("/final" , lwfinal)
+            
+            
+            
+            
